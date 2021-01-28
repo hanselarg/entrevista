@@ -96,13 +96,13 @@ console.log(i);
 
 // diferencia entre == y === en javascript
 
-let num = "3"
+/*let num = "3"
 
 num == 3 => true
 "3" == 3
 
 num === 3 => false
-
+*/
 
 // hacer una funcion para verificar si una palabra es un palindromo. Un palindromo es una palabra que se lee igual al derecho y al reves
 
@@ -129,8 +129,32 @@ function esPalindromo2(str) {
     return true;
 }
 
-//test cases 
+/*test cases 
 esPalindromo("menem") => true
 esPalindromo("casa") => false
 esPalindromo("") => true
 esPalindromo("a") =>true
+*/
+
+
+// Write a JavaScript function to get the last element of an array. Passing a parameter 'n' will return the last 'n' elements of the array. Go to the editor
+// Test Data :
+
+console.log(last([7, 9, 0, -2]));
+console.log(last([7, 9, 0, -2],3));
+console.log(last([7, 9, 0, -2],6));
+/*Expected Output :
+-2
+[9, 0, -2]
+[7, 9, 0, -2] 
+*/
+
+var last = function lastElement(array,n) {
+    if (array == null)
+        return null;
+    if (n == null)
+        return array[array.length-1];
+    return array.slice(Math.max(array.length-n,0));
+};
+
+console.log(last([7, 9, 0, -2]));
